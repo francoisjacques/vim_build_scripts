@@ -1,6 +1,6 @@
 #!/bin/sh.exe
 # Prepare VIM for a Unix build
-
+cd ../vim
 ./configure --with-features=huge \
 	    --enable-cscope \
 	    --enable-luainterp=yes \
