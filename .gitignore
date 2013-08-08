@@ -1,0 +1,10 @@
+# vim byproducts
+################
+*~
+*.swp
+*.swo
+
+# MacOSX byproducts
+###################
+.DS_Store
+
