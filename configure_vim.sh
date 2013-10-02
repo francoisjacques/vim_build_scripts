@@ -1,4 +1,4 @@
-#!/bin/sh.exe
+#!/bin/sh
 
 # This script invokes vim's configuration script with a
 # configuration I've found to be the most useful to me overtime.
