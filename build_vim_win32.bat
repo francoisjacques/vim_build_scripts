@@ -1,13 +1,11 @@
-REM Build vim for Win64, Pentium4, with python and perl interpreters support
-REM It expects the vim snapshot to be at ..\vim
-REM ********************************************************
-REM Ruby support was problematic under Windows x64 at time
-REM of writing and therefore is not enabled by this script.
+REM Build vim for Win64, Pentium4, with python, ruby and perl interpreters support
+REM Python from \\mtlnetapp02b\GTGsiNewBuild\Tools\Python\python-2.7.3.amd64.msi
+REM Perl from \\mtlnetapp02b\GTGsiNewBuild\Tools\Perl\ActivePerl-5.8.9.825-MSWin32-x64-288577.msi
+REM Ruby 1.9 from ftp://ftp.ruby-lang.org/pub/ruby/binaries/mswin32/ruby-1.9.2-p0-x64-mswin64_80.zip
+REM
 REM ********************************************************
 REM The directory separator MUST be backslash!
 REM ********************************************************
-call "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\vcvarsall.bat" amd64
-cd ..\vim
 
 setlocal
 set CPU=AMD64
@@ -20,6 +18,12 @@ set NETBEANS=yes
 set DYNAMIC_PYTHON=yes
 set PYTHON=C:\Python27
 set PYTHON_VER=27
+set DYNAMIC_RUBY=yes
+REM Doesn't work unless you compile with VC2008, until Ruby SDK gets release with VC2010-friendly headers
+REM set RUBY=C:\Ruby-x64
+REM set RUBY_VER=19
+REM set RUBY_VER_LONG=1.9.1
+REM set RUBY_PLATFORM=x64-mswin64_80
 set DYNAMIC_PERL=yes
 set PERL=C:\Perl64
 set PERL_VER=58
