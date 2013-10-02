@@ -19,7 +19,7 @@
 #
 #   --enable-python3interp=yes \
 #   --with-python3-config-dir=/usr/lib/python3.2/config \
-
+cd ../vim
 ./configure \
     --with-compiledby=`whoami` \
     --with-features=normal \
