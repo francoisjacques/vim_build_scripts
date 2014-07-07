@@ -19,22 +19,29 @@
 #
 #   --enable-python3interp=yes \
 #   --with-python3-config-dir=/usr/lib/python3.2/config \
+export PYTHON_VER=27
+export PYTHON3_VER=32
+
 cd ../vim
+
 ./configure \
     --with-compiledby=`whoami` \
-    --with-features=normal \
-    --with-tlib=ncursesw \
+    --with-features=huge \
     --enable-cscope \
     --enable-luainterp=yes \
     --enable-pythoninterp=yes \
-    --with-python-config-dir=/usr/lib/python2.7/config \
     --enable-perlinterp=yes \
+    --enable-python3interp=yes \
     --enable-rubyinterp=yes \
-    --with-x \
+    --enable-multibyte \
+    --enable-fontset \
+    --with-x=yes \
     --enable-xim \
-    --enable-gtk2-check \
-    --enable-gnome-check \
-    --enable-fontset
+    --enable-gui=gtk2 \
+    --prefix=/usr/local \
+    --with-tlib=ncursesw
+
+./configure \
 
 echo Ready to be built with make, and deployment with make install
 
